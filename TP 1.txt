@@ -1,0 +1,18 @@
+TP 1 :
+- Pull une image linux basique, par exemple : alpine, ubuntu, debian, etc.
+- Utiliser docker run ou docker create + start pour créer et lancer le container (Conseil : nommez-le avec --name)
+- Utiliser exec pour se connecter au container
+- Installer node (approche différente selon votre distribution linux)
+  - Ubuntu : https://doc.ubuntu-fr.org/nodejs
+  - Générique : https://nodejs.org/en/download/package-manager
+- Créer un dossier "web" dans /usr et se rendre dans ce dossier
+- Utiliser git pour pull le projet suivant :
+https://github.com/rm-formation/docker-into-tp1.git
+- Dans ce dossier, initialiser le projet avec "npm i", et lancez le avec "npm run dev -- --host"
+- Vite va lancer un serveur de développement, port par défaut 5173
+- Tenter d'accéder au site via votre système hôte
+
+Soucis fréquents :
+- Si vous avez oublié de définir un mappage de port (port hôte : port container) lors de la création, vous allez devoir recréer le container depuis le début
+- Je tape "docker run ubuntu" ou similair, pas d'erreur mais rien ne se passe.
+-> Penser à mettre les arguments -it (et potentiellement -d), sinon ubuntu au lancement n'a aucune commande a exécuter, et docker va automatiquement le couper

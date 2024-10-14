@@ -1,0 +1,8 @@
+TP 3 :
+Nous avons découvert les dockerfiles, reproduire le TP 1 en partant entièrement d'un dockerfile
+
+Pour rappel, une fois le dockerfile écrit, créer l'image avec :
+-> Si dans un dossier avec un seul dockerfile :
+docker build NOM_IMAGE .
+-> Sinon, ou si le dockerfile est nommé (par ex. test.Dockerfile)
+docker build -f NOM_IMAGE .

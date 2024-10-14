@@ -1,0 +1,7 @@
+TP 5 :
+Clonez le projet github suivant :
+https://github.com/rm-formation/docker-intro-todo.git
+
+En partant du fichier docker-compose.yml fourni et définissant déjà les services db et back, on souhaite ajouter un service "front" via une image nginx qui servira le contenu du dossier front/dist
+
+- Ajouter le service "front" dans le docker-compose.yml

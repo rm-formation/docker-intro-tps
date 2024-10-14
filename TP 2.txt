@@ -1,0 +1,18 @@
+TP 2 :
+- En repartant du conteneur du TP 1 :
+J'ai un conteneur initialisé avec node installé, mon projet git déjà pull, les dépendances installées.
+J'aimerais maintenant pouvoir relancer ce container rapidement déjà configuré
+
+Objectif :
+- Depuis le conteneur existant, créer une nouvelle image "sdv-docker-tp2"
+ -> Il existe une commande spécifiquement faite pour ça, à vous de la trouver !
+ -> Un point de départ pour trouver : https://docs.docker.com/reference/cli/docker/container/
+- Stopper et supprimer le conteneur du TP 1
+- Recréer un nouveau conteneur depuis l'image sdv-docker-tp2
+
+Attention, garder en tête que cette approche ne respecte pas les bonnes pratiques de création d'une image docker :
+- Idéalement, on pourrait partir de l’image officielle node pour simplifier la création
+– Trop de choses sont installés et deviennent inutiles après coup (ex github)
+– Vite est axé dev, pas prod, on devrait utiliser un serveur plus adapté
+– On utilise pas encore de nombreux éléments importants : volumes, network, etc
+- Tous ces éléments sont adressés dans les TPs suivants

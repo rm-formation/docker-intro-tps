@@ -1,0 +1,12 @@
+TP 4 :
+Après les Dockerfile, nous avons découvert le multi-stage build
+L'objectif désormais est une fois de plus de rendre accessible le site du projet github 'docker-m1-2024-tp1'
+Mais sans avoir une énorme image contenant node, npm, git qui ne nous servent plus, et en utilisant nginx pour rendre le site accessible plutôt que Vite via "npm run dev"
+
+Pour cela :
+- En repartant du Dockerfile du TP 3
+- Au lieu de lancer le serveur de développement de Vite avec "npm run dev", je vais build le projet via "npm run build"
+- Vite me créé un dossier "dist" qui contient les fichiers définitifs de mon site
+- Je créé un deuxième stage de build en partant d'une image nginx
+- Je déplace les fichiers de mon site (dossier dist) vers le dossier nginx correspondant (/usr/share/nginx/html/)
+- Je build l'image docker, et j'ai normalement bien accès à mon site comme précédemment, mais avec une image de ~190Mo au lieu d'1Go
